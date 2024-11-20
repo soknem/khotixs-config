@@ -1,8 +1,8 @@
 
 #database
-DB_HOST: 143.198.83.9
-DB_PORT: 5431
-DB_NAME: media
+db-host: 143.198.83.9
+db-port: 5431
+db-name: media
 
 #minio
 minio-url: http://143.198.83.9:9000
