@@ -19,19 +19,19 @@ spring:
         format_sql: true
 
 minio:
-  url: ${MINIO_URL}
+  url: ${minio-url}
   secret-key: ${MINIO_SECRETE_KEY}
-  bucket-name: ${MINIO_BUCKET}
+  bucket-name: ${minio-bucket}
   access-key: ${MINIO_ACCESS_KEY}
 
 media:
   #media endpoint
-  image-end-point: ${IMAGE_ENDPOINT}
+  image-end-point: ${image-endpoint}
 
-  video-end-point: ${VIDEO_ENDPOINT}
+  video-end-point: ${video-endpoint}
 
   #the host that handle show image
-  base-uri: ${MEDIA_BASE_URI}
+  base-uri: ${base-uri}
 
 server:
   port: 8080
