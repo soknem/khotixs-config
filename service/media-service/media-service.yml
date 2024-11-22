@@ -4,8 +4,9 @@ spring:
       max-file-size: 100MB
       max-request-size: 500MB
   datasource:
-    username: ${DB_USERNAME}
-    password: soknem123
+#    username: ${DB_USERNAME}
+    password: 123
+    usrname: soknem
 #    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://${db-host}:${db-port}/${db-name}
