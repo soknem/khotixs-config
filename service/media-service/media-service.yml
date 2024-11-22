@@ -6,7 +6,7 @@ spring:
   datasource:
 #    username: ${DB_USERNAME}
     password: soknem123
-    usrname: soknem
+    username: soknem
 #    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://${db-host}:${db-port}/${db-name}
