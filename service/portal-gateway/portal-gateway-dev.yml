@@ -27,10 +27,10 @@ spring:
         - id: business-route
           uri: lb://media-service
           predicates:
-            - Path=/api/v1/medias/**
+            - Path=/api/v1/images/**
           filters:
             - TokenRelay=
-            - RewritePath=/medias/(?<segment>.*),/$\{segment}
+            - RewritePath=/api/v1/images/(?<segment>.*),/$\{segment}
 
         - id: identity-route
           uri: lb://identity-service
