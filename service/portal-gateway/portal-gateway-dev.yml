@@ -13,7 +13,7 @@ spring:
             authorization-grant-type:
               - authorization_code
             scope: openid, profile, email
-            redirect-uri: http://localhost:8000/login/oauth2/code/nextjs
+            redirect-uri: http://localhost:8001/login/oauth2/code/nextjs
   cloud:
     gateway:
       discovery:
