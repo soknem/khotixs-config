@@ -43,7 +43,7 @@ spring:
             - Path=/api/v1/images/**
           filters:
             - TokenRelay=
-            - RewritePath=/api/v1/images/(?<segment>.*),/api/v1/images/$\{segment}ក
+            - RewritePath=/api/v1/images/(?<segment>.*),/api/v1/images/$\{segment}
 
         - id: identity-route
           uri: lb://identity-service
