@@ -4,10 +4,10 @@ spring:
       max-file-size: 100MB
       max-request-size: 500MB
   datasource:
-#    username: ${DB_USERNAME}
-    password: soknem123
-    username: soknem
-#    password: ${DB_PASSWORD}
+    username: ${DB_USERNAME}
+#    password: soknem123
+#    username: soknem
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://${db-host}:${db-port}/${db-name}
 
@@ -23,12 +23,12 @@ spring:
 
 minio:
   url: ${minio-url}
-#  secret-key: ${MINIO_SECRETE_KEY}
+  secret-key: ${MINIO_SECRETE_KEY}
   bucket-name: ${minio-bucket}
-#  access-key: ${MINIO_ACCESS_KEY}
+  access-key: ${MINIO_ACCESS_KEY}
 
-  secret-key: 7H7NYDvIw79KASm2k9DOq6fpWNsoCZK0D8LgYMwW
-  access-key: 2Ga483QLfVJTAqA8ZPYD
+#  secret-key: 7H7NYDvIw79KASm2k9DOq6fpWNsoCZK0D8LgYMwW
+#  access-key: 2Ga483QLfVJTAqA8ZPYD
 
 media:
   #media endpoint
