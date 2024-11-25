@@ -14,8 +14,7 @@ spring:
             provider: nextjs
             client-id: nextjs
             client-secret: nextjs123
-            authorization-grant-type:
-              - authorization_code
+            authorization-grant-type: authorization_code
             scope:
               - openid
               - profile
