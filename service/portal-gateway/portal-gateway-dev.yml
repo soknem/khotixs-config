@@ -42,8 +42,8 @@ spring:
           predicates:
             - Path=/api/v1/images/**
           filters:
-            - TokenRelay
-            - RewritePath=/api/v1/images/(?<segment>.*),/api/v1/images/$\{segment}
+            - TokenRelay=
+            - RewritePath=/api/v1/images/(?<segment>.*),/api/v1/images/$\{segment}ក
 
         - id: identity-route
           uri: lb://identity-service
