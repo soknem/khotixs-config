@@ -34,13 +34,13 @@ spring:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Request-Headers
         - SaveSession
       routes:
-        - id: business-route
+        - id: media-route
           uri: lb://media-service
           predicates:
-            - Path=/api/v1/images/**
+            - Path=/images/**
           filters:
             - TokenRelay=
-            - RewritePath=/api/v1/images/(?<segment>.*),/$\{segment}
+            - RewritePath=/images/(?<segment>.*),/api/v1/images/${segment}
 
         - id: identity-route
           uri: lb://identity-service
