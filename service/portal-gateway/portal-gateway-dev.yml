@@ -35,7 +35,7 @@ spring:
           predicates:
             - Path=/api/v1/images/**
           filters:
-            - TokenRelay
+            - TokenRelay=
             - RewritePath=/api/v1/images/(?<segment>.*),/$\{segment}
 
         - id: identity-route
@@ -43,7 +43,7 @@ spring:
           predicates:
             - Path=/identity/**
           filters:
-            - TokenRelay
+            - TokenRelay=
             - RewritePath=/identity/(?<segment>.*),/$\{segment}
 
         - id: nextjs
