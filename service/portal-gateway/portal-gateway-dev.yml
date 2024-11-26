@@ -18,7 +18,7 @@ spring:
             token-uri: http://localhost:9090/oauth2/token
 
         registration:
-          nextjs:
+          google:
             client-id: 905661943124-sojsd3iv15a849s92rh08pdc52u3ambi.apps.googleusercontent.com
             client-secret: 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
             redirect-uri: http://localhost:8000/login/oauth2/code/nextjs
