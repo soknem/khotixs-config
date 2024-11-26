@@ -37,8 +37,7 @@ spring:
         - id: media-route
           uri: lb://media-service
           predicates:
-            - Path=/images/**
-            - Path=/images
+            - Path=/images/**,/images
           filters:
             - TokenRelay=
             - RewritePath=/images/(?<segment>.*),/api/v1/images/${segment}
