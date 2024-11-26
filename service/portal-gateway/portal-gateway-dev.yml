@@ -56,7 +56,7 @@ spring:
         - id: identity-route
           uri: lb://identity-service
           predicates:
-            - Path=/identity/**
+            - Path=/identity/**,/login/**
           filters:
             - TokenRelay=
             - RewritePath=/identity/(?<segment>.*),/$\{segment}
