@@ -18,11 +18,12 @@ spring:
           google:
             client-id: 905661943124-sojsd3iv15a849s92rh08pdc52u3ambi.apps.googleusercontent.com
             client-secret: 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
-            redirect-uri: "http://localhost:8000/login/oauth2/code/google"
+            redirect-uri: http://localhost:8000/login/oauth2/code/google
             authorization-grant-type: authorization_code
             scope:
               - profile
               - email
+              - openid
           nextjs:
             provider: nextjs
             client-id: nextjs
