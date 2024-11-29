@@ -34,6 +34,20 @@ spring:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Request-Headers
         - SaveSession
       routes:
+        - id: identity-route
+          uri: lb://identity-service
+          predicates:
+            - Path=/identity/**
+          filters:
+            - TokenRelay=
+            - RewritePath=/identity/(?<segment>.*),/$\{segment}
+        - id: logout-route
+          uri: lb://identity-service
+          predicates:
+            - Path=/logout
+          filters:
+            - ClearSessionFilter
+            - RedirectToHomePageFilter
         - id: media-route
           uri: lb://media-service
           predicates:
@@ -42,13 +56,6 @@ spring:
             - TokenRelay=
             - RewritePath=/api/v1/images/(?<segment>.*),/api/v1/images/${segment}
 
-        - id: identity-route
-          uri: lb://identity-service
-          predicates:
-            - Path=/identity/**
-          filters:
-            - TokenRelay=
-            - RewritePath=/identity/(?<segment>.*),/$\{segment}
 
         - id: nextjs
           uri: http://localhost:3000
