@@ -47,7 +47,7 @@ spring:
             - Path=/logout
           filters:
 #            - ClearSessionFilter
-            - RedirectToHomePageFilter
+#            - RedirectToHomePageFilter
         - id: media-route
           uri: lb://media-service
           predicates:
